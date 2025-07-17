@@ -20,20 +20,28 @@ This guide walks you through uploading, documenting, wiring, and running a user-
 
 ## Hardware Setup
 Connect LCD pins to BeagleBone Black as listed above.
+
 Use a potentiometer (typically 10kΩ) for contrast between LCD V0 and GND/VCC.
+
 Ensure LCD VCC receives 5V supply.
 
 ## For Python (lcd_user_python.py)
 sudo apt-get update
+
 sudo pip install Adafruit_BBIO
+
 sudo python user_space/lcd_user_python.py
 
 ## Code Example (Summary)
 These scripts/software use user-space GPIO libraries:
+
 Python uses Adafruit_BBIO.GPIO for pin control
+
 No special kernel modules or device tree overlays are required for these simple methods.
 
 ## Usage Notes
 Run with root privileges to access GPIO.
+
 If you change wiring, update the pin definitions in your script.
+
 Wiring is critical: double-check connections before powering the circuit.
