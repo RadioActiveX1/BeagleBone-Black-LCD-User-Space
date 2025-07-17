@@ -4,16 +4,27 @@ This guide walks you through uploading, documenting, wiring, and running a user-
 ## Pin Map
 ### LCD
 1	  GND	  P8_1, P9_1	-	Power ground
+
 2	  VCC   (+5V)	P9_7, P9_8	-	Power +5V
+
 3	  V0    (Contrast)	-	-	Potentiometer Recommended
+
 4  	RS	  P8_7	GPIO2_2	Command/Data register select
+
 5	  RW    (tie to GND)	P8_8*	GPIO2_3	Usually always GND (write)
+
 6	  E     (Enable)	P8_9	GPIO2_5	Enable signal
+
 11	D4	  P8_10	GPIO2_4	Data line (4-bit mode)
+
 12	D5	  P8_11	GPIO1_13	Data line
+
 13	D6	  P8_12	GPIO1_12	Data line
+
 14	D7	  P8_14	GPIO0_26	Data line
+
 15	LED+  (Backlight)	P9_7 via 220Ω	-	Optional
+
 16	LED-  (Backlight)	P8_1, P9_1	-	Optional
 
 *If you're not reading from the LCD, tie RW to GND.
