@@ -42,7 +42,7 @@ This guide walks you through uploading, wiring, compiling, and running a **user-
 sudo apt-get update
 sudo pip install Adafruit_BBIO
 sudo python user_space/lcd_user_python.py
-
+```
 Key Points:
 
 Uses Adafruit_BBIO.GPIO for pin control.
@@ -66,6 +66,7 @@ Compile directly on the BeagleBone:
 ```
 g++ lcd_user_cpp.cpp -o lcd_user_cpp
 sudo ./lcd_user_cpp
+```
 
 ### Cross-Compiling from Host (e.g. Ubuntu PC)
 
@@ -75,17 +76,17 @@ If you prefer to build on your PC and then transfer the binary:
 ```
 sudo apt update
 sudo apt install g++-arm-linux-gnueabihf
-
+```
 2. Compile for BeagleBone Black (ARM target)
 ```
 arm-linux-gnueabihf-g++ lcd_user_cpp.cpp -o lcd_user_cpp
-
+```
 3. Copy to board via SSH/SCP then run on board using
 ```
 ssh debian@192.168.7.2
 chmod +x lcd_user_cpp
 sudo ./lcd_user_cpp
-
+```
 ### Usage Notes
 
 Always run with root privileges to access GPIOs.
